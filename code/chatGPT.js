@@ -7,11 +7,11 @@ async function submitFeedback() {
     }
 
     try {
-        const response = await fetch('YOUR_API_ENDPOINT', {
+        const response = await fetch('/v1/completions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer YOUR_API_KEY`
+                'Authorization': `Bearer sk-proj-Sfi1AFCxnkcPFgCdXVenT3BlbkFJLdQHSdQmrspvn1VAySTR`
             },
             body: JSON.stringify({
                 prompt: feedback,
