@@ -76,7 +76,8 @@ Mario.TitleState.prototype.Draw = function(context) {
 };
 
 Mario.TitleState.prototype.CheckForChange = function(context) {
-    if (Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.S)) {
-        context.ChangeState(Mario.GlobalMapState);
+       if (Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.S)) {
+        var levelType = Mario.LevelType.Overground; // Set the desired level type
+        context.ChangeState(new Mario.LevelState(2, levelType));
     }
 };

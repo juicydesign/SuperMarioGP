@@ -459,12 +459,7 @@ Mario.LevelState.prototype.BumpInto = function(x, y) {
 };
 
 Mario.LevelState.prototype.CheckForChange = function(context) {
-	if (this.GotoLoseState) {
-		context.ChangeState(new Mario.LoseState());
-	}
-	else {
-		if (this.GotoMapState) {
-			context.ChangeState(Mario.GlobalMapState);
-		}
-	}
+	 if (this.GotoLoseState || this.GotoMapState) {
+        context.ChangeState(new Mario.TitleState());
+    }
 };
